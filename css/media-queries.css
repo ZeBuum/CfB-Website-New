@@ -1,0 +1,49 @@
+/* EXTRA SMALL DEVICE WIDTH: 320px
+==============================================================================
+=========================================================================== */
+@media only screen and (min-width: 320px) {
+
+}
+
+/* SMALL DEVICE WIDTH: 480px
+==============================================================================
+=========================================================================== */
+@media only screen and (min-width: 480px) {
+  .MobileNav {
+    width: 375px;
+  }
+
+  .TopBar__logo {
+    height: 50%;
+  }
+}
+
+/* EXTRA SMALL DEVICE WIDTH: 768px
+==============================================================================
+=========================================================================== */
+@media only screen and (min-width: 768px) {
+  .MobileNavToggle {
+    display: none;
+  }
+
+  .mobile-hide {
+    display: block;
+  }
+
+  .SplashContent h1 {
+      font-size: 10vh;
+  }
+
+  .SplashContent__sloganMessage {
+    font-size: 2.5vh;
+  }
+
+  .MeetupInfo {
+    flex-wrap: nowrap;
+    padding: 55px 20px 0 20px;
+  }
+
+  .MeetupInfo__meetupCol p {
+    margin: 45px auto 35px auto;
+  }
+}
