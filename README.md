@@ -1,4 +1,6 @@
-# New Code For Boulder Website (Testing)
+# New Code For Boulder Website 
+
+See progress in our document [here](https://docs.google.com/document/d/1yNdG-tcdMwmtihURoOCIGGVsa9h4vC_rGVem2Ib-pvM/edit).
 
 We're redesigning the old website for the Code for Boulder Brigade.
 
