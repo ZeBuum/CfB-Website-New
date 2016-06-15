@@ -198,6 +198,10 @@ h6 {
   border-top: 5px solid #333;
 }
 
+.TopBar:hover {
+  height: 100px !important;
+}
+
 .TopBar--hide {
   top: -100px !important;
 }
@@ -609,8 +613,8 @@ h6 {
 
 .projects-grid {
     margin: 0 auto;
-    padding-left: 15px;
-    max-width: 1140px;
+    padding-left: 25px;
+    max-width: 1125px;
 }
 
 .project {

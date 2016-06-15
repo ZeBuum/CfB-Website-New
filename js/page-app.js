@@ -51,7 +51,8 @@ $(document).ready(function(){
   var didScroll;
   var lastScrollTop = 0;
   var delta = 5;
-  var navbarHeight = $('.TopBar').outerHeight();
+  var navbarHeight = $('#js-TopBar').outerHeight();
+  //true if TopBar is hovered
 
   $(window).scroll(function(event) {
     didScroll = true;
@@ -62,8 +63,10 @@ $(document).ready(function(){
     Remedy this by checking if the user has scrolled on an interval instead of
     executing functions for every pixel scrolled.
   */
+
   setInterval(function() {
-    if (didScroll === true) {
+    var topBarHovered = $('#js-TopBar').is(':hover');//true if TopBar is hovered
+    if (didScroll === true && !topBarHovered) {
       hasScrolled();
       didScroll = false;
     }
@@ -74,10 +77,10 @@ $(document).ready(function(){
     var wScroll = $(this).scrollTop();
 
     if (wScroll > 150) {
-      $(".TopBar").css("height", "75px");
+      $("#js-TopBar").css("height", "75px");
     }
     else if (wScroll < 151) {
-      $(".TopBar").css("height", "100px");
+      $("#js-TopBar").css("height", "100px");
     }
 
     // Check if user scrolled more than delta(5)
@@ -89,12 +92,12 @@ $(document).ready(function(){
     // This is necessary so user can never see what is "behind" the 'TopBar'
     if (wScroll > lastScrollTop && wScroll > navbarHeight) {
         // Scroll Down
-        $('.TopBar').removeClass('nav-down').addClass('TopBar--hide');
+        $('#js-TopBar').removeClass('nav-down').addClass('TopBar--hide');
         $('.MobileNavToggle').removeClass('nav-down').addClass('TopBar--hide');
     } else {
         // Scroll Up
         if (wScroll + $(window).height() < $(document).height()) {
-          $('.TopBar').removeClass('TopBar--hide').addClass('nav-down');
+          $('#js-TopBar').removeClass('TopBar--hide').addClass('nav-down');
           $('.MobileNavToggle').removeClass('TopBar--hide').addClass('nav-down');
         }
     }
@@ -139,6 +142,15 @@ $(document).ready(function(){
 
   });
 
+  /* LOCAL LINK SCROLL ANIMATION
+  ============================================================================
+  * Uses localScroll.js plugin
+  ========================================================================= */
+  //offset scrollTo element location to account for height of TopBar
+  $.extend($.scrollTo.defaults, {
+    offset: -100
+  });
 
+  $('.TopBar__nav').localScroll({duration:800});
 
 });
