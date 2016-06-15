@@ -597,11 +597,58 @@ h6 {
   margin: 0 10px 0 0;
 }
 
+/* CFBProjects
+==============================================================================
+* Isotope.js grid
+=========================================================================== */
 
+.CFBProjects {
+  text-align: center;
+  padding: 60px 0;
+}
 
+.projects-grid {
+    margin: 0 auto;
+    padding-left: 15px;
+    max-width: 1140px;
+}
 
+.project {
+    text-align: center;
+    margin-bottom: 30px;
+    height: 350px;
+    width: 350px;
+    overflow: hidden;
+    float: left;
+    padding: 0;
+}
 
+.project__img {
+    margin-bottom: 25px;
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
 
+.project__img:hover {
+    opacity: 0.6;
+}
+
+/* no transition on .isotope container */
+
+.isotope .isotope-item {
+    /* change duration value to whatever you like */
+    -webkit-transition-duration: 0.6s;
+    -moz-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+}
+
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
 
 
 

@@ -102,8 +102,42 @@ $(document).ready(function(){
     lastScrollTop = wScroll;
   };
 
+  /* RESPONSIVE PROJECTS GRID
+  ============================================================================
+  * Initialize isotope.js plugin on .projects-grid
+  * resize width of .projects-grid to keep it's content centered on page
+  ========================================================================= */
+  $(window).load(function(){
 
 
+    var $grid = $('.projects-grid'),
+        $body = $('body'),
+        colW = 375,
+        columns = null;
+
+
+    $grid.isotope({
+      // disable window resizing
+      resizable: true,
+      masonry: {
+        columnWidth: colW
+      }
+    });
+
+    $(window).smartresize(function(){
+      // check if columns has changed
+      var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
+      if ( currentColumns !== columns ) {
+        // set new column count
+        columns = currentColumns;
+        // apply width to container manually, then trigger relayout
+        $grid.width( columns * colW )
+          .isotope('reLayout');
+      }
+
+    }).smartresize(); // trigger resize to set container width
+
+  });
 
 
 
