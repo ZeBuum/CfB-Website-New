@@ -10,33 +10,15 @@ $(document).ready(function(){
 
 
 
-  /* MOBILE MENU - HAMBURGER CLICK EVENT HANDLER
+  /* MOBILE MENU - HAMBURGER, 'X' CLICK EVENT HANDLER
   ============================================================================
-  * Animate menu icon from hambuger to an X shape
-  * Disable scrolling
+  * Animate menu icon from hambuger to an X shape, vice versa
   ========================================================================= */
   $(document).on('click', '#hamburger', function() {
     // Animate hamburger -> 'X'
-    $(this).toggleClass('open');
-
-    // Disable scrolling
-    $('body').addClass('noscroll');
+    $(this).toggleClass('open MobileNavToggle');
 	});
 
-
-
-
-
-  /* MOBILE MENU - 'X' CLICK EVENT HANDLER
-  ============================================================================
-  * Renable scrolling
-  ========================================================================= */
-  $(document).on('click', '.open', function() {
-    // Enable scrolling
-    $('body').removeClass('noscroll');
-
-    console.log("Hi");
-  });
 
 
 
@@ -44,7 +26,7 @@ $(document).ready(function(){
 
   /* PAGE SCROLLING EFFECTS
   ============================================================================
-  * Hide 'TopBar' and 'MobileNavToggle' when user scrolls down, unhide when
+  * Hide 'TopBar' and '#hamburger' when user scrolls down, unhide when
   scroll up
   * Adjust height of 'TopBar' when user scrolls from top of page
   ========================================================================= */
@@ -93,12 +75,14 @@ $(document).ready(function(){
     if (wScroll > lastScrollTop && wScroll > navbarHeight) {
         // Scroll Down
         $('#js-TopBar').removeClass('nav-down').addClass('TopBar--hide');
-        $('.MobileNavToggle').removeClass('nav-down').addClass('TopBar--hide');
+        if ($('#hamburger').hasClass('MobileNavToggle')) {
+          $('#hamburger').removeClass('nav-down').addClass('TopBar--hide');
+        }
     } else {
         // Scroll Up
         if (wScroll + $(window).height() < $(document).height()) {
           $('#js-TopBar').removeClass('TopBar--hide').addClass('nav-down');
-          $('.MobileNavToggle').removeClass('TopBar--hide').addClass('nav-down');
+          $('#hamburger').removeClass('TopBar--hide').addClass('nav-down');
         }
     }
 
@@ -112,7 +96,6 @@ $(document).ready(function(){
   * set isotope filter to fade all other thumbnails when one is clicked
   ========================================================================= */
   $(window).load(function(){
-
 
     var $grid = $('.projects-grid'),
         $body = $('body'),
@@ -142,8 +125,9 @@ $(document).ready(function(){
     }).smartresize(); // trigger resize to set container width
 
     $('.project').click(function(){
-          $('.project').css('margin-bottom', '60px');
-          $('.projects-grid').css('padding', '60px 55px 0 55px');
+          $('.project').addClass('js-project--selected');
+          $('.projects-grid').addClass('js-projects-grid--selected');
+          $('#js-projects-grid__close-btn').removeClass('hidden');
 
           var selector = $(this).attr('data-filter');
           $grid.isotope({
@@ -152,6 +136,17 @@ $(document).ready(function(){
            return false;
       });
 
+    $('#js-projects-grid__close-btn').click(function(){
+          $('.project').removeClass('js-project--selected');
+          $('.projects-grid').removeClass('js-projects-grid--selected');
+          $(this).addClass('hidden');
+
+          var selector = $(this).attr('data-filter');
+          $grid.isotope({
+              filter: selector,
+           });
+           return false;
+      });
 
   });
 
@@ -165,5 +160,6 @@ $(document).ready(function(){
   });
 
   $('.TopBar__nav').localScroll({duration:800});
+  $('.MobileNav').localScroll({duration:800});
 
 });

@@ -55,20 +55,18 @@
     <div class="PageWrap">
 
       <!-- Mobile Navigation Toggle -->
-      <label class="MobileNavToggle animated fadeInRight" for="sidebarToggle">
-        <div id="hamburger">
+      <label class="MobileNavToggle animated fadeInRight" for="sidebarToggle" id="hamburger">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-        </div>
       </label>
 
       <div class="SiteContent">
 
           <div class="TopBar animated fadeInDown" id="js-TopBar">
             <ul class='TopBar__nav nav--left mobile-hide'>
-              <li><a href="">Home</a></li>
+              <li><a href="#SplashHero">Home</a></li>
               <li><a href="#CFBProjects">Projects</a></li>
             </ul>
 
@@ -81,7 +79,7 @@
             </ul>
           </div><!-- END OF: 'TopBar' -->
 
-        <header class="SplashHero">
+        <header class="SplashHero" id="SplashHero">
           <div class="SplashContent">
             <h1 class="animated fadeInDown delay-07s">CODE FOR BOULDER</h1>
 
@@ -141,38 +139,45 @@
             <div class="" id='js-CFBProjects__title'>
               <h2>Current Projects</h2>
               <h6>Click a project for more info.</h6>
-
             </div>
-            <div class="projects-grid grey-card">
-              <div class="project project--foto" data-filter=".project--foto">
-                <img class="project__img" src="img/Portfolio-pic1.jpg" alt="">
-                <h3>Foto Album</h3>
-                <p>Print Design</p>
-              </div>
-              <div class="project project--luca" data-filter=".project--luca">
-                  <img class="project__img" src="img/Portfolio-pic2.jpg" alt="">
-                  <h3>Luca Theme</h3>
-                  <p>Web Design</p>
-              </div>
-              <div class="project project--uni" data-filter=".project--uni">
-                  <img class="project__img" src="img/Portfolio-pic3.jpg" alt="">
-                  <h3>Uni Sans</h3>
-                  <p>Branding</p>
-              </div>
-              <div class="project project--vinyl" data-filter=".project--vinyl">
-                  <img class="project__img" src="img/Portfolio-pic4.jpg" alt="">
-                  <h3>Vinyl Record</h3>
-                  <p>Photography</p>
-              </div>
-              <div class="project project--hipster" data-filter=".project--hipster">
-                  <img class="project__img" src="img/Portfolio-pic5.jpg" alt="">
-                  <h3>Hipster</h3>
-                  <p>Branding</p>
-              </div>
-              <div class="project project--windmills" data-filter=".project--windmills">
-                  <img class="project__img" src="img/Portfolio-pic6.jpg" alt="">
-                  <h3>Windmills</h3>
-                  <p>Photography</p>
+
+            <div class="grey-card">
+              <button class="projects-grid__close-btn hidden animated fadeInDown" id="js-projects-grid__close-btn" data-filter="*">
+                <svg viewbox="0 0 40 40">
+                  <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+                </svg>
+              </button>
+              <div class="projects-grid">
+                <div class="project project--foto" data-filter=".project--foto">
+                  <img class="project__img" src="img/Portfolio-pic1.jpg" alt="">
+                  <h3>Foto Album</h3>
+                  <p>Print Design</p>
+                </div>
+                <div class="project project--luca" data-filter=".project--luca">
+                    <img class="project__img" src="img/Portfolio-pic2.jpg" alt="">
+                    <h3>Luca Theme</h3>
+                    <p>Web Design</p>
+                </div>
+                <div class="project project--uni" data-filter=".project--uni">
+                    <img class="project__img" src="img/Portfolio-pic3.jpg" alt="">
+                    <h3>Uni Sans</h3>
+                    <p>Branding</p>
+                </div>
+                <div class="project project--vinyl" data-filter=".project--vinyl">
+                    <img class="project__img" src="img/Portfolio-pic4.jpg" alt="">
+                    <h3>Vinyl Record</h3>
+                    <p>Photography</p>
+                </div>
+                <div class="project project--hipster" data-filter=".project--hipster">
+                    <img class="project__img" src="img/Portfolio-pic5.jpg" alt="">
+                    <h3>Hipster</h3>
+                    <p>Branding</p>
+                </div>
+                <div class="project project--windmills" data-filter=".project--windmills">
+                    <img class="project__img" src="img/Portfolio-pic6.jpg" alt="">
+                    <h3>Windmills</h3>
+                    <p>Photography</p>
+                </div>
               </div>
             </div>
           </section><!-- END OF: 'CFBProjects' -->
@@ -196,8 +201,8 @@
       This needs to come after the end of the 'SiteContent' div -->
       <nav class="MobileNav">
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Projects</a></li>
+          <li><a href="#SplashHero">Home</a></li>
+          <li><a href="#CFBProjects">Projects</a></li>
           <li><a href="">About</a></li>
           <li><a href="">Contact</a></li>
         </ul>

@@ -13,20 +13,17 @@ This document uses BEM naming conventions, learn more at: https://en.bem.info/
 * mobile-hide
 * clear
 =========================================================================== */
+@-ms-viewport { width: device-width; }
+
 body {
-  background: #000;
+  background: #FFF;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
   color: #888888;
   margin: 0;
   min-height: 3000px;
-}
-
-body.noscroll {
-  position: fixed;
-  overflow-y: scroll;
-  width: 100%;
+  width:100%;
 }
 
 .PageWrap {
@@ -166,7 +163,7 @@ h6 {
   filter: alpha(opacity=20);
 }
 
-#sidebarToggle:checked + .PageWrap .MobileNavToggle {
+#sidebarToggle:checked + .PageWrap #hamburger {
   color: red;
   top: 30px;
   right: 30px;
@@ -265,7 +262,7 @@ h6 {
   color: #7cc576;
 }
 
-.MobileNavToggle {
+#hamburger {
   position: fixed;
   top: 17px;
   right: 12px;
@@ -275,15 +272,7 @@ h6 {
   line-height: 0;
   color: #777;
   z-index: 10;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-}
 
-.MobileNavToggle:hover {
-  color: #222;
-}
-
-#hamburger {
   width: 35px;
   height: 32px;
   -webkit-transform: rotate(0deg);
@@ -291,7 +280,13 @@ h6 {
       transform: rotate(0deg);
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
+  -webkit-transition: top .3s ease;
+  transition: top .3s ease;
   cursor: pointer;
+}
+
+#hamburger:hover {
+  color: #222;
 }
 
 #hamburger span {
@@ -481,16 +476,19 @@ h6 {
 =========================================================================== */
 .MainContent {
   width: 100%;
-  background: white;
   min-height: 1000px;
   position: relative;
   padding: 40px 0;
 }
 
 .grey-card {
+  position: relative;
   background: #eee;
   box-shadow: 0 5px #bbb;
   border-radius: 3px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 60px;
 }
 
 
@@ -500,10 +498,7 @@ h6 {
 * Meetup Info Box
 =========================================================================== */
 .MeetupInfo {
-  width: 90%;
   padding: 40px 20px 0 20px;
-  margin: 0 auto;
-  margin-bottom: 60px;
   color: #555;
   box-sizing: border-box;
   display: -webkit-box;
@@ -614,12 +609,49 @@ h6 {
 }
 
 .projects-grid {
+    position: relative;
+    z-index: 0;
     margin: 0 auto;
     padding: 30px 0 0 25px;
     max-width: 1125px;
     transition: all 0.6s;
     -moz-transition: all 0.6s;
     -webkit-transition: all 0.6s;
+}
+
+.js-projects-grid--selected {
+  padding: 60px 55px 0 55px;
+}
+
+.projects-grid__close-btn {
+  width: 35px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top:0px;
+  z-index: 1;
+  background-color:transparent;
+  border:none;
+  outline: none;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+}
+
+.projects-grid__close-btn svg {
+  display: block;
+}
+
+.projects-grid__close-btn svg path {
+  stroke: #222222;
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-width: 5;
+}
+
+.projects-grid__close-btn:hover svg path {
+  opacity: 0.6;
 }
 
 .project {
@@ -630,6 +662,10 @@ h6 {
     overflow: hidden;
     float: left;
     padding: 0;
+}
+
+.js-project--selected {
+  margin-bottom: 60px;
 }
 
 .project__img {
@@ -727,4 +763,11 @@ h6 {
 .delay-12s {
     animation-delay: 1.2s;
     -webkit-animation-delay: 1.2s;
+}
+
+
+/* UTILITY CLASSES
+==============================================================================*/
+.hidden {
+  display: none !important;
 }
