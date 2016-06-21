@@ -109,6 +109,7 @@ $(document).ready(function(){
   ============================================================================
   * Initialize isotope.js plugin on .projects-grid
   * resize width of .projects-grid to keep it's content centered on page
+  * set isotope filter to fade all other thumbnails when one is clicked
   ========================================================================= */
   $(window).load(function(){
 
@@ -139,6 +140,18 @@ $(document).ready(function(){
       }
 
     }).smartresize(); // trigger resize to set container width
+
+    $('.project').click(function(){
+          $('.project').css('margin-bottom', '60px');
+          $('.projects-grid').css('padding', '60px 55px 0 55px');
+
+          var selector = $(this).attr('data-filter');
+          $grid.isotope({
+              filter: selector,
+           });
+           return false;
+      });
+
 
   });
 
