@@ -1,241 +1,129 @@
-<!doctype HTML>
-<html>
-  <head>
-    <meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, maximum-scale=1">
+---
+layout: default
+---
 
-    <!-- Other META Elements here -->
+<header class="SplashHero" id="SplashHero">
+  <div class="SplashContent">
+    <h1 class="animated fadeInDown delay-07s">CODE FOR BOULDER</h1>
 
-    <title>Code for Boulder</title>
+  	<div class="SplashContent__sloganMessage animated fadeInUp delay-1s">
+  		PLANNING FOR THE FUTURE OF BOULDER
+  	</div>
 
-    <!-- Custom Fonts, from Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,600,700,800' rel='stylesheet' type='text/css'>
+    <a class="SplashContent__ctaButton animated fadeInUp delay-1s" href="http://www.meetup.com/CodeForBoulder/">Join Today</a>
 
-    <!-- CSS Libs -->
-    <link href="css/libs/normalize.css" rel="stylesheet" type="text/css">
-    <link href="css/libs/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="css/libs/animate.css" rel="stylesheet" type="text/css">
+    <ul class="SplashContent__socialIcons animated fadeInUp delay-15s">
+  		<li>
+  			<a href="https://github.com/CodeForBoulder"><i class="fa fa-github" aria-hidden="true"></i></a>
+  		</li>
+  		<li>
+  			<a href="https://twitter.com/CodeforBoulder"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  		</li>
+  		<li>
+  			<a href="https://codeforboulder.herokuapp.com/"><i class="fa fa-slack" aria-hidden="true"></i></a>
+  		</li>
+  	</ul>
+  </div>
+</header>
 
-    <!-- Custom Styles -->
-  	<link href="css/main.css" rel="stylesheet" type="text/css">
-  	<link href="css/media-queries.css" rel="stylesheet" type="text/css">
-
-    <!-- Favicon Package -->
-    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="favicons/favicon-194x194.png" sizes="194x194">
-    <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="favicons/manifest.json">
-    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
-    <meta name="msapplication-config" content="favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-  </head>
-  <body>
-
-    <!--
-    * This checkbox input is for the mobile navigation.
-    * When checked, the mobile navigation is visible.
-    * For the mobile navigation to work, all of the site content
-    * needs to be wrapped in 'PageWrap'.
-    -->
-    <input type="checkbox" id="sidebarToggle" name="" value="">
-    <div class="PageWrap">
-
-      <!-- Mobile Navigation Toggle -->
-      <label class="MobileNavToggle animated fadeInRight" for="sidebarToggle" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-      </label>
-
-      <div class="SiteContent">
-
-          <div class="TopBar animated fadeInDown" id="js-TopBar">
-            <ul class='TopBar__nav nav--left mobile-hide'>
-              <li><a href="#SplashHero">Home</a></li>
-              <li><a href="#CFBProjects">Projects</a></li>
-            </ul>
-
-            <!-- LOGO -->
-            <a href="/"><img class="TopBar__logo" src="img/svgs/cforb.svg" alt="Code for Boulder"></a>
-
-            <ul class='TopBar__nav nav--right mobile-hide'>
-              <li><a href="">Who We Are</a></li>
-              <li><a href="">Contact</a></li>
-            </ul>
-          </div><!-- END OF: 'TopBar' -->
-
-        <header class="SplashHero" id="SplashHero">
-          <div class="SplashContent">
-            <h1 class="animated fadeInDown delay-07s">CODE FOR BOULDER</h1>
-
-  					<div class="SplashContent__sloganMessage animated fadeInUp delay-1s">
-  						PLANNING FOR THE FUTURE OF BOULDER
-  					</div>
-
-            <a class="SplashContent__ctaButton animated fadeInUp delay-1s" href="http://www.meetup.com/CodeForBoulder/">Join Today</a>
-
-            <ul class="SplashContent__socialIcons animated fadeInUp delay-15s">
-  						<li>
-  							<a href="https://github.com/CodeForBoulder"><i class="fa fa-github" aria-hidden="true"></i></a>
-  						</li>
-  						<li>
-  							<a href="https://twitter.com/CodeforBoulder"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-  						</li>
-  						<li>
-  							<a href="https://codeforboulder.herokuapp.com/"><i class="fa fa-slack" aria-hidden="true"></i></a>
-  						</li>
-  					</ul>
-          </div>
-        </header>
+<!-- Everything after the splash header/hero -->
+<div class="MainContent">
 
 
-        <!-- Everything after the splash header/hero -->
-        <div class="MainContent">
+  <section class="MeetupInfo grey-card">
+    <div class="MeetupInfo__meetupCol">
+      <h4>HOSTED AT THE HUB</h4>
+      <p>
+        Graciously hosted by the folks at <a href="http://impacthubboulder.com/">Impact HUB</a> in Boulder.
+      </p>
+      <a class="MeetupInfo__btn" href=""><i class="fa fa-map-marker" aria-hidden="true"></i>Get Directions</a>
+    </div>
+
+    <div class="MeetupInfo__meetupCol">
+      <h4>UPCOMING MEETING</h4>
+      <p>
+        Lorem impsum, mongrati erati limpini morgriti. El stat mustache eras.
+      </p>
+      <a class="MeetupInfo__btn" href=""><i class="fa fa-check" aria-hidden="true"></i>RSVP Here</a>
+    </div>
+
+    <div class="MeetupInfo__meetupCol">
+      <h4>PLAN AHEAD</h4>
+      <p>
+        Lorem impsum, mongrati erati limpini morgriti. El stat mustache eras.
+      </p>
+      <a class="MeetupInfo__btn" href=""><i class="fa fa-calendar" aria-hidden="true"></i>Learn More</a>
+    </div>
+  </section>
+
+  <section class="MeetupInfo grey-card">
+
+    <div class="MeetupInfo__meetupCol">
+      <div class="twitter-div">
+        <a class="twitter-timeline" href="https://twitter.com/CodeforBoulder">Tweets by CodeforBoulder</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
+    <div class="MeetupInfo__meetupCol">
+    </div>
+
+  </section>
 
 
-          <section class="MeetupInfo grey-card">
-            <div class="MeetupInfo__meetupCol">
-              <h4>HOSTED AT THE HUB</h4>
-              <p>
-                Graciously hosted by the folks at <a href="http://impacthubboulder.com/">Impact HUB</a> in Boulder.
-              </p>
-              <a class="MeetupInfo__btn" href=""><i class="fa fa-map-marker" aria-hidden="true"></i>Get Directions</a>
-            </div>
+  <section class="CFBProjects" id="CFBProjects">
+    <div class="" id='js-CFBProjects__title'>
+      <h2>Current Projects</h2>
+      <h6>Click a project for more info.</h6>
+    </div>
 
-            <div class="MeetupInfo__meetupCol">
-              <h4>UPCOMING MEETING</h4>
-              <p>
-                Lorem impsum, mongrati erati limpini morgriti. El stat mustache eras.
-              </p>
-              <a class="MeetupInfo__btn" href=""><i class="fa fa-check" aria-hidden="true"></i>RSVP Here</a>
-            </div>
+    <div class="grey-card">
+      <button class="projects-grid__close-btn hidden animated fadeInDown" id="js-projects-grid__close-btn" data-filter="*">
+        <svg viewbox="0 0 40 40">
+          <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+        </svg>
+      </button>
+      <div class="projects-grid">
+        <div class="project project--foto" data-filter=".project--foto">
+          <img class="project__img" src="img/Portfolio-pic1.jpg" alt="">
+          <h3>Foto Album</h3>
+          <p>Print Design</p>
+        </div>
+        <div class="project project--luca" data-filter=".project--luca">
+          <img class="project__img" src="img/Portfolio-pic2.jpg" alt="">
+          <h3>Luca Theme</h3>
+          <p>Web Design</p>
+        </div>
+        <div class="project project--uni" data-filter=".project--uni">
+          <img class="project__img" src="img/Portfolio-pic3.jpg" alt="">
+          <h3>Uni Sans</h3>
+          <p>Branding</p>
+        </div>
+        <div class="project project--vinyl" data-filter=".project--vinyl">
+          <img class="project__img" src="img/Portfolio-pic4.jpg" alt="">
+          <h3>Vinyl Record</h3>
+          <p>Photography</p>
+        </div>
+        <div class="project project--hipster" data-filter=".project--hipster">
+          <img class="project__img" src="img/Portfolio-pic5.jpg" alt="">
+          <h3>Hipster</h3>
+          <p>Branding</p>
+        </div>
+        <div class="project project--windmills" data-filter=".project--windmills">
+          <img class="project__img" src="img/Portfolio-pic6.jpg" alt="">
+          <h3>Windmills</h3>
+          <p>Photography</p>
+        </div>
+      </div>
+    </div>
+  </section><!-- END OF: 'CFBProjects' -->
 
-            <div class="MeetupInfo__meetupCol">
-              <h4>PLAN AHEAD</h4>
-              <p>
-                Lorem impsum, mongrati erati limpini morgriti. El stat mustache eras.
-              </p>
-              <a class="MeetupInfo__btn" href=""><i class="fa fa-calendar" aria-hidden="true"></i>Learn More</a>
-            </div>
-          </section>
+  <section class="AboutCFB">
 
-          <section class="MeetupInfo grey-card">
-
-            <div class="MeetupInfo__meetupCol">
-              <div class="twitter-div">
-                <a class="twitter-timeline" href="https://twitter.com/CodeforBoulder">Tweets by CodeforBoulder</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </div>
-            </div>
-            <div class="MeetupInfo__meetupCol">
-            </div>
-
-          </section>
-
-
-          <section class="CFBProjects" id="CFBProjects">
-            <div class="" id='js-CFBProjects__title'>
-              <h2>Current Projects</h2>
-              <h6>Click a project for more info.</h6>
-            </div>
-
-            <div class="grey-card">
-              <button class="projects-grid__close-btn hidden animated fadeInDown" id="js-projects-grid__close-btn" data-filter="*">
-                <svg viewbox="0 0 40 40">
-                  <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
-                </svg>
-              </button>
-              <div class="projects-grid">
-                <div class="project project--foto" data-filter=".project--foto">
-                  <img class="project__img" src="img/Portfolio-pic1.jpg" alt="">
-                  <h3>Foto Album</h3>
-                  <p>Print Design</p>
-                </div>
-                <div class="project project--luca" data-filter=".project--luca">
-                    <img class="project__img" src="img/Portfolio-pic2.jpg" alt="">
-                    <h3>Luca Theme</h3>
-                    <p>Web Design</p>
-                </div>
-                <div class="project project--uni" data-filter=".project--uni">
-                    <img class="project__img" src="img/Portfolio-pic3.jpg" alt="">
-                    <h3>Uni Sans</h3>
-                    <p>Branding</p>
-                </div>
-                <div class="project project--vinyl" data-filter=".project--vinyl">
-                    <img class="project__img" src="img/Portfolio-pic4.jpg" alt="">
-                    <h3>Vinyl Record</h3>
-                    <p>Photography</p>
-                </div>
-                <div class="project project--hipster" data-filter=".project--hipster">
-                    <img class="project__img" src="img/Portfolio-pic5.jpg" alt="">
-                    <h3>Hipster</h3>
-                    <p>Branding</p>
-                </div>
-                <div class="project project--windmills" data-filter=".project--windmills">
-                    <img class="project__img" src="img/Portfolio-pic6.jpg" alt="">
-                    <h3>Windmills</h3>
-                    <p>Photography</p>
-                </div>
-              </div>
-            </div>
-          </section><!-- END OF: 'CFBProjects' -->
-
-          <section class="AboutCFB">
-
-          </section><!-- END OF: 'AboutCFB' -->
+  </section><!-- END OF: 'AboutCFB' -->
 
 
-          <footer>
+  <footer>
 
-          </footer>
-
-
-        </div><!-- END OF: 'MainContent' -->
-      </div><!-- END OF: 'SiteContent' -->
+  </footer>
 
 
-
-      <!-- Mobile Slideout Menu
-      This needs to come after the end of the 'SiteContent' div -->
-      <nav class="MobileNav">
-        <ul>
-          <li><a href="#SplashHero">Home</a></li>
-          <li><a href="#CFBProjects">Projects</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-
-        <img class="MobileNav__logo" src="img/svgs/cforb-invert-color.svg" alt="Code for Boulder">
-      </nav>
-    </div><!-- END OF: 'page-wrap' -->
-
-
-
-
-    <!-- jQuery -->
-  	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-
-    <!-- Other JS Scripts -->
-    <script type="text/javascript" src="js/libs/jquery.isotope.js"></script><!--layout the grid of project thumbnails-->
-    <script type="text/javascript" src="js\libs\jquery.scrollTo.min.js"></script>
-    <script type="text/javascript" src="js\libs\jquery.localScroll.min.js"></script><!--scrollTo and localScroll animate local links-->
-  	<script type="text/javascript" src="js/libs/wow.js"></script>
-
-    <!--page-app is not a plugin.  author-defined.-->
-    <script type="text/javascript" src="js/page-app.js"></script>
-  </body>
-</html>
+</div><!-- END OF: 'MainContent' -->

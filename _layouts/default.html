@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+  <!--
+      * This checkbox input is for the mobile navigation.
+      * When checked, the mobile navigation is visible.
+      * For the mobile navigation to work, all of the site content
+      * needs to be wrapped in 'PageWrap'.
+    -->
+  {% include head.html %}
+
+  <input type="checkbox" id="sidebarToggle" name="" value="">
+  <div class="PageWrap">
+
+    <!-- Mobile Navigation Toggle -->
+    <label class="MobileNavToggle animated fadeInRight" for="sidebarToggle" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="SiteContent">
+
+      {% include header.html %}
+
+      {{ content }}
+
+      {% include footer.html %}
+
+    </div><!-- END OF: 'SiteContent' -->
+
+
+
+    <!-- Mobile Slideout Menu
+         This needs to come after the end of the 'SiteContent' div -->
+    <nav class="MobileNav">
+      <ul>
+        <li><a href="#SplashHero">Home</a></li>
+        <li><a href="#CFBProjects">Projects</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+
+      <img class="MobileNav__logo" src="img/svgs/cforb-invert-color.svg" alt="Code for Boulder">
+    </nav>
+  </div><!-- END OF: 'page-wrap' -->
+
+</html>
