@@ -10,6 +10,6 @@ We're redesigning the old website for the Code for Boulder Brigade, in order to 
 - Advertisement of Older Projects
 - The distrbution of knowledge, through the blog
 
-If you need jekyll, use 'gem install jekyll' to install jekyll as a gem.
+If you need jekyll, use `gem install jekyll` to install jekyll as a gem.
 
 To run and show the project as it stands, go to your nearest terminal and `bundle exec jekyll serve`
