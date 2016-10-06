@@ -46,8 +46,14 @@ $(document).ready(function(){
     executing functions for every pixel scrolled.
   */
 
+		$("#js-TopBar").hover(
+				function(){
+						$(this).toggleClass('is-hover');
+				}
+		);
+
   setInterval(function() {
-    var topBarHovered = $('#js-TopBar').is(':hover');//true if TopBar is hovered
+    var topBarHovered = $('#js-TopBar').hasClass('is-hover');//true if TopBar is hovered
     if (didScroll === true && !topBarHovered) {
       hasScrolled();
       didScroll = false;
